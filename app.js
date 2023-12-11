@@ -19,8 +19,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.use('/add_new', indexRouter);
 app.use('/users', usersRouter);
+
+app.get('/', (req, res) => {
+  res.send('Hello, this is the root!');
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -37,5 +41,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 module.exports = app;
