@@ -19,11 +19,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/add_new', indexRouter);
+app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 app.get('/', (req, res) => {
-  res.send('Hello, this is the root!');
+  res.redirect('index');
 });
 
 // catch 404 and forward to error handler

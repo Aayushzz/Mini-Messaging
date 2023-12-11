@@ -111,3 +111,19 @@ body {
   border-color: #3498db;
   outline: none;
 }
+/* Add this CSS for styling the textarea */
+.form textarea {
+  width: 100%;
+  max-width: 600px;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
