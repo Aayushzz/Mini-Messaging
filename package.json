@@ -6,7 +6,7 @@
     "start": "node ./src/bin/www",
     "devstart": "nodemon ./src/bin/www",
     "serverstart": "DEBUG= npm run devstart",
-    "vercel-build": "npm install && npm run build"
+    "vercel-build": "npm install && npm test"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
